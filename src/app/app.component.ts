@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-const pi: number = 3.14159265359;    
+
 @Component({
     selector: 'my-app',
-    template: `<label>Введіть і’мя:</label>
-                 <input [(ngModel)]="name" placeholder="R">
-                 <h1>Довжина кола  {{2}*{pi}*{R}}</h1>
-                 <h1>площа :  {{pi}*{Math.pow(R)}}</h1>`
+    template: `<label>Введіть радіус:</label>
+                <input type = "number" [(ngModel)]="R"> 
+                 <h1>Довжина кола  {{2 * pi * R }}</h1>
+                 <h1>Площа кола  {{pi * R * R }}</h1>
+                 <h1>Об'єм шара  {{(4/3) * pi * R * R * R }}</h1>`
 })
 export class AppComponent {
-    name= '';
+    R:number = 0;
+    pi:number = 3.14159265359;
 }
 
 
